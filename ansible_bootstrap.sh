@@ -82,6 +82,9 @@ fi
 echo "If this all worked, you should now be able to ssh ansible@$TARGETHOST and use sudo"
 echo "In your ansible playbooks you can now specify user: ansible and sudo: yes"
 
+echo "Installing python as ansible@$TARGETHOST"
+ssh ansible@$TARGETHOST -t sudo apt-get install python
+
 echo "===="
 echo "Done"
 echo "===="
